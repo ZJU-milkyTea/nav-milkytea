@@ -120,12 +120,11 @@ export default {
 }
 
 .search-input {
-    height: 45px;
+    height: 100px;
     width: 600px;
     margin: 0 auto;
     margin-top: 10px;
     position: relative;
-	background-color: coral;
 }
 
 .search-input input {

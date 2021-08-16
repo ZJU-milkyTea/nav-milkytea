@@ -1,14 +1,23 @@
 <template>
   <div class="container">
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
-      <nav-top></nav-top>
+    
+    <!-- 用父子传message的形式来决定每个nav的子nav中的图片和链接跳转放哪个， 最子的NAV通过message来选择图片和链接 -->
+
+    <!-- top 1 2 3 -->
+    <nav-top :message="0">
+
+    </nav-top>
+    <nav-top></nav-top>
+    <nav-top></nav-top>
+
+    <!-- mid 1 2 3 -->
+    <nav-top></nav-top>
+    <nav-top></nav-top>
+    <nav-top></nav-top>
+    <!-- button 1 2 3 -->
+    <nav-top></nav-top>
+    <nav-top></nav-top>
+    <nav-top></nav-top>
   </div>
 </template>
 
