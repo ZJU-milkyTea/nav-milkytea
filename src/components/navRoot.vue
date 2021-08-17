@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import navTop from './navigationBar/navTop.vue';
+import navTop from './navigationBar/navChild.vue';
 
 export default {
     components: {

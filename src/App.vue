@@ -1,4 +1,5 @@
 <template>
+  
   <div id="app">
     <main-page/>
   </div>
@@ -14,6 +15,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 #app {
