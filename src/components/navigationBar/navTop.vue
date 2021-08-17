@@ -1,18 +1,16 @@
 <template>
     <!-- top 没啥意义， 后面改名字  这个组件就是最子的组件了 -->
     <div class="container-top">
-        <p>{{namelist[message].title}}</p>
         <div class="nav-content" v-for="(item,index) in namelist[message].nameNav" :key="index">
             <img :src= "namelist[message].picPath[index]" >
             <p>{{namelist[message].nameNav[index]}}</p>
         </div>
-       
-  </div>
+    </div>
 </template>
 
 <script>
 export default {
-    data: function(){
+    data() {
         return{
             namelist:[{
                 id: 1,
@@ -42,16 +40,16 @@ export default {
                     'https://www.baidu.com'
                 ],
                 picPath:[
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png',
-                    'ima/head1.png'
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
+                    require('@/assets/ima/head1.png'),
                 ]
                 
             },{
