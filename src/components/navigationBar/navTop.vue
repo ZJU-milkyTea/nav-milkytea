@@ -1,7 +1,8 @@
 <template>
     <!-- top 没啥意义， 后面改名字  这个组件就是最子的组件了 -->
     <div class="container-top">
-        <div class="nav-content" v-for="(item,index) in namelist[message].nameNav" :key="index">
+        <p>{{namelist[message].title}}</p>
+        <div class="nav-content" v-for="(item,index) in namelist[message].nameNav" :key="index" @click=clickNavChild(message,index)>
             <img :src= "namelist[message].picPath[index]" >
             <p>{{namelist[message].nameNav[index]}}</p>
         </div>
@@ -53,12 +54,17 @@ export default {
                 ]
                 
             },{
-                id: 2,
-                title: '竞赛'
-            }],
-            linkList:[{
-                
-            }]
+               
+            },{
+               
+
+
+            }]  
+        }
+    },
+    methods:{
+        clickNavChild: function(mes,index){
+            window.open(this.namelist[mes].jumpPath[index]);
         }
     },
     props:['message']
@@ -94,15 +100,18 @@ export default {
 .nav-content img{
     margin-top: 7px;
     max-width: 25px;
+    float: left;
 }
 
-.nav-content span{
-    font-size: 20px;
+
+.nav-content p{
+    background-color: slategrey;
+    font-size: 15px;
     font-weight: bold;
+    vertical-align:12px;
     text-align: center;
-    vertical-align:6px;
+    
 }
-
 
 
 </style>
