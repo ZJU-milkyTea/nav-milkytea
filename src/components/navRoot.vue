@@ -3,21 +3,10 @@
     
     <!-- 用父子传message的形式来决定每个nav的子nav中的图片和链接跳转放哪个， 最子的NAV通过message来选择图片和链接 -->
 
-    <!-- top 1 2 3 -->
     <nav-top :message="0">
 
     </nav-top>
-    <nav-top></nav-top>
-    <nav-top></nav-top>
 
-    <!-- mid 1 2 3 -->
-    <nav-top></nav-top>
-    <nav-top></nav-top>
-    <nav-top></nav-top>
-    <!-- button 1 2 3 -->
-    <nav-top></nav-top>
-    <nav-top></nav-top>
-    <nav-top></nav-top>
   </div>
 </template>
 
@@ -39,10 +28,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-  width: 80%;
+  width: 85%;
   height: 800px;
   margin: 0 auto;
-  background-color: rgb(48, 131, 76);
+  background-color: rgb(236, 236, 236);
   padding-top: 50px;
 }
 

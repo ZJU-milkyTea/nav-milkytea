@@ -1,11 +1,48 @@
 <template>
     <!-- top 没啥意义， 后面改名字  这个组件就是最子的组件了 -->
-    <div class="container-top">
+    <!-- <div class="container-top">
         <p>{{namelist[message].title}}</p>
         <div class="nav-content" v-for="(item,index) in namelist[message].nameNav" :key="index" @click=clickNavChild(message,index)>
             <img :src= "namelist[message].picPath[index]" >
             <p>{{namelist[message].nameNav[index]}}</p>
         </div>
+    </div> -->
+    <div>
+        <el-row :gutter="10">
+            <el-col :span="8">
+                <el-row :gutter="5">
+                    <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
+                        <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
+                            <img :src= "namelist[message].picPath[index]" >
+                            <p>{{namelist[message].nameNav[index]}}</p>
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-col>
+
+            <el-col :span="8">
+                <el-row :gutter="5">
+                    <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
+                        <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
+                            <img :src= "namelist[message].picPath[index]" >
+                            <p>{{namelist[message].nameNav[index]}}</p>
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-col>
+
+            <el-col :span="8">
+                <el-row :gutter="5">
+                    <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
+                        <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
+                            <img :src= "namelist[message].picPath[index]" >
+                            <p>{{namelist[message].nameNav[index]}}</p>
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-col>
+        </el-row>
+        
     </div>
 </template>
 
@@ -73,6 +110,63 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.el-row {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* &:last-child {
+      margin-bottom: 0;
+    } */
+}
+
+.el-col {
+    border-radius: 2px;
+}
+
+.bg-purple-dark {
+    background: #99a9bf;
+}
+
+.bg-purple {
+    background: #d3dce6;
+}
+
+.bg-purple-light {
+    background: #e5e9f2;
+}
+
+.grid-content {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    min-height: 36px;
+    text-align: center;
+}
+
+.grid-content img{
+    max-width: 25px;
+    vertical-align: middle; /* 对齐 */
+}
+
+.grid-content:hover{
+    background-color: rgb(104, 141, 245);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.grid-content p {
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    display: inline-block; /* 转换为行内元素才可对齐 */ 
+}  
+
+.row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+}
+
 .container-top{
     width: 30%;
     height: 230px;
@@ -81,37 +175,5 @@ export default {
     margin-left: 50px;
     margin-top: 50px;
 }
-
-.nav-content{
-    width: 30%;
-    height: 40px;
-    margin: 0 auto;
-    float: left;
-    background-color: #fff;
-    margin-left: 10px;
-    margin-top: 10px;
-} 
-
-.nav-content:hover{
-    background-color: blue;
-    cursor: pointer;
-}
-
-.nav-content img{
-    margin-top: 7px;
-    max-width: 25px;
-    float: left;
-}
-
-
-.nav-content p{
-    background-color: slategrey;
-    font-size: 15px;
-    font-weight: bold;
-    vertical-align:12px;
-    text-align: center;
-    
-}
-
 
 </style>
