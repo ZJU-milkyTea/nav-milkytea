@@ -13,8 +13,10 @@
                 <el-row :gutter="5">
                     <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
                         <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
-                            <img :src= "namelist[message].picPath[index]" >
-                            <p>{{namelist[message].nameNav[index]}}</p>
+                            <div>
+                                <img :src= "namelist[message].picPath[index]" >
+                                <p>{{namelist[message].nameNav[index]}}</p>
+                            </div>
                         </div>
                     </el-col>
                 </el-row>
@@ -24,8 +26,10 @@
                 <el-row :gutter="5">
                     <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
                         <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
-                            <img :src= "namelist[message].picPath[index]" >
-                            <p>{{namelist[message].nameNav[index]}}</p>
+                            <div>
+                                <img :src= "namelist[message].picPath[index]" >
+                                <p>{{namelist[message].nameNav[index]}}</p>
+                            </div>
                         </div>
                     </el-col>
                 </el-row>
@@ -35,8 +39,10 @@
                 <el-row :gutter="5">
                     <el-col :span="8"  v-for="(item,index) in namelist[message].nameNav" :key="index">
                         <div class="grid-content bg-purple"  @click=clickNavChild(message,index)>
-                            <img :src= "namelist[message].picPath[index]" >
-                            <p>{{namelist[message].nameNav[index]}}</p>
+                            <div>
+                                <img :src= "namelist[message].picPath[index]" >
+                                <p>{{namelist[message].nameNav[index]}}</p>
+                            </div>
                         </div>
                     </el-col>
                 </el-row>
@@ -128,7 +134,8 @@ export default {
 }
 
 .bg-purple {
-    background: #d3dce6;
+    /* background: #d3dce6; */
+    background: white;
 }
 
 .bg-purple-light {
@@ -137,9 +144,14 @@ export default {
 
 .grid-content {
     margin-bottom: 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     min-height: 36px;
     text-align: center;
+    color:rgb(128, 128, 128);
+}
+
+.grid-content div {
+    transition: all 0.3s;
 }
 
 .grid-content img{
@@ -147,18 +159,22 @@ export default {
     vertical-align: middle; /* 对齐 */
 }
 
+.grid-content:hover > div{ /* 设置 hover 在 div 子元素上的作用 */
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
 .grid-content:hover{
-    background-color: rgb(104, 141, 245);
+    background-color: rgb(69, 157, 245);
     color: white;
     cursor: pointer;
-    font-size: 20px;
 }
 
 .grid-content p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 5px;
     font-size: 15px;
     line-height: 15px;
-    font-weight: bold;
     display: inline-block; /* 转换为行内元素才可对齐 */ 
 }  
 
