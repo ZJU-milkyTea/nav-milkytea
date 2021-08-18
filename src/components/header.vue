@@ -29,7 +29,7 @@ export default {
   width: 100%;
   height: 30px;
   margin: 0 auto;
-  background-color: red;
+  background-color: rgb(69, 157, 245);
 }
 
 </style>
