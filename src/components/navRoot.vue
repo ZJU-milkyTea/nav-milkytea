@@ -28,11 +28,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-  width: 85%;
+  width: 95%;
   height: 800px;
   margin: 0 auto;
-  background-color: rgb(236, 236, 236);
-  padding-top: 50px;
+  background-color: rgb(242, 242, 242);
+  /* padding-top: 50px; */
 }
 
 
