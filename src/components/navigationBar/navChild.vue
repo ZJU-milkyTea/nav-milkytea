@@ -165,9 +165,6 @@ export default {
                     {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
                     {nameNav: 'MOOC', jumpPath: 'https://www.icourse163.org/', picPath: require('@/assets/ima/MOOC.png')},
                     {nameNav: '网易公开课', jumpPath: 'https://open.163.com/', picPath: require('@/assets/ima/wangyi_course.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
             }]  
         }
