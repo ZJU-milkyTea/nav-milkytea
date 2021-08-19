@@ -1,5 +1,4 @@
 <template>
-    <!-- top 没啥意义， 后面改名字  这个组件就是最子的组件了 -->
     <div>
         <!-- 第一行 ----------------------------------------------------------------------------->
         <el-row :gutter="5">
@@ -149,6 +148,10 @@ export default {
                     {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
                     {nameNav: '格式转换', jumpPath: 'https://convertio.co/zh/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: '百度翻译', jumpPath: 'https://fanyi.baidu.com/?aldtype=16047#auto/zh', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: 'PDF编辑', jumpPath: 'https://lightpdf.com/zh/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -165,6 +168,9 @@ export default {
                     {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
                     {nameNav: 'MOOC', jumpPath: 'https://www.icourse163.org/', picPath: require('@/assets/ima/MOOC.png')},
                     {nameNav: '网易公开课', jumpPath: 'https://open.163.com/', picPath: require('@/assets/ima/wangyi_course.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
             }]  
         }
