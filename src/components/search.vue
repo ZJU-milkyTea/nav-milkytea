@@ -1,6 +1,11 @@
 <template>
     <div class="search-root">
-        
+        <!-- 添加搜索引擎对应图标 -->
+        <!-- <el-image
+            style="width: 90px; height: 50px; position: absolute; margin-left: -100px; margin-top: -5px"
+            :src="require('@/assets/ima/fafu_logo.png')"
+            fit="contain">
+        </el-image> -->
 		<el-input  placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()">	
             <el-select placeholder="请选择" v-model="select" slot="prepend" >
                 <el-option label="百度" value="0"></el-option>
