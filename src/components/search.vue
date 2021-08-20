@@ -1,9 +1,9 @@
 <template>
     <div class="search-root">
         <!-- 添加搜索引擎对应图标 -->
-		<el-input  placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()">	
+		<el-input id = "search-input" placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()" ref="searchInput">	
             <el-popover placement="bottom-start" width="620" slot="prepend" v-model="visible" trigger="hover">
-                <p> 搜索引擎 </p>
+                <p> 搜索引擎: </p>
                 <el-row :gutter="10">
                     <el-col :span="6" v-for="(item, index) in urlData" :key="index"> 
                         <div class="hover-card">
@@ -22,12 +22,12 @@
                 </el-image>
             </el-popover>
             <el-button slot="append" icon="el-icon-search" @click="clickSearch()">
-
             </el-button>
         </el-input>
-       
 	</div>
 </template>
+
+
 
 <script>
 export default {
@@ -41,11 +41,11 @@ export default {
                 url: 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=',
                 picpath: require('@/assets/ima/baidu_search.png')
             },{
-                title:'google',
+                title:'Google',
                 url: 'https://www.google.com/search?q=',
                 picpath: require('@/assets/ima/google_search.png')
             },{
-                title:'bilibili',
+                title:'Bilibili',
                 url: 'https://search.bilibili.com/all?keyword=',
                 picpath: require('@/assets/ima/bilibili.png')
             },{
@@ -53,11 +53,11 @@ export default {
                 url: 'https://www.zhihu.com/search?q=',
                 picpath: require('@/assets/ima/zhihu.png')
             },{
-                title:'github',
+                title:'Github',
                 url: 'https://github.com/search?q=',
                 picpath: require('@/assets/ima/github.png')
             },{
-                title:'bing',
+                title:'Bing',
                 url: 'https://cn.bing.com/search?q=',
                 picpath: require('@/assets/ima/bing.png')
             },{
@@ -76,6 +76,16 @@ export default {
             this.select = index;
             this.visible = false;   //  点击后关闭提示弹窗
         },
+    },
+    mounted(){
+        this.$nextTick(() => {
+            this.$refs.searchInput.focus()
+        })
+    },
+    showAdd(){
+        this.$nextTick(() => {
+            this.$refs.searchInput.focus()
+        })
     }
 }
 </script>
@@ -87,6 +97,10 @@ export default {
 	height: 80px;
 	margin: 0 auto;
 	margin-top: 50px;
+}
+
+.el-popover p{
+    font-weight: bold;
 }
 
 .input-with-select .el-input-group__prepend {
