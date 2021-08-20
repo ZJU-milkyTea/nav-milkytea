@@ -1,16 +1,15 @@
 <template>
     <div>
-        <!-- 第一行 ----------------------------------------------------------------------------->
-        <el-row :gutter="10">
-            <!-- <div>{{test(itemBlock)}}</div> -->
-            <el-col :span="8">
+        <el-row :gutter="10">   
+            <!-- 这里around没有作用 有效的话就完成了 -->
+            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[0].title }} </p>
                     <el-row :gutter="5">
                         <el-col :span="8"  v-for="(item,index) in namelist[0].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <!-- 是否显示图标， 1：图标+文字， 0：只有文字 -->
-                                <div v-if="namelist[0].visable[index] === 1">
+                                <div class= "grid-content-img" v-if="namelist[0].visable[index] === 1">
                                     <img :src= "item.picPath" >
                                     <p>{{item.nameNav}}</p>
                                 </div>
@@ -22,8 +21,7 @@
                     </el-row>
                 </div>
             </el-col>
-
-            <el-col :span="8">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[1].title }} </p>
                     <el-row :gutter="5">
@@ -38,8 +36,7 @@
                     </el-row>
                 </div>
             </el-col>
-
-            <el-col :span="8">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[2].title }} </p>
                     <el-row :gutter="5">
@@ -58,11 +55,11 @@
 
         <!--第二行 ----------------------------------------------------------------------------->
         <el-row :gutter="10">
-            <el-col :span="8">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[3].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[3].NavItem" :key="index">
+                        <el-col :span="8" v-for="(item,index) in namelist[3].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <div>
                                     <img :src= "item.picPath" >
@@ -74,11 +71,11 @@
                 </div>
             </el-col>
 
-            <el-col :span="8">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[1].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[1].NavItem" :key="index">
+                        <el-col :span="8" v-for="(item,index) in namelist[1].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <div>
                                     <img :src= "item.picPath" >
@@ -90,11 +87,11 @@
                 </div>
             </el-col>
 
-            <el-col :span="8">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
                     <p class="container-p"> {{ namelist[2].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[2].NavItem" :key="index">
+                        <el-col :span="8" v-for="(item,index) in namelist[2].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <div>
                                     <img :src= "item.picPath" >
@@ -117,7 +114,7 @@ export default {
                 id: 1,
                 title: '农大 · 常用',
                 numberBlock:4,
-                visable:[1,1,1,0,1,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
+                visable:[1,1,1,0,0,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
                 NavItem: [
                     {nameNav: '农大官网', jumpPath: 'https://www.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '计信院官网', jumpPath: 'https://xxxy.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
@@ -206,16 +203,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-
 .el-row {
     padding-left: 10px;
     padding-right: 10px;
-    /* &:last-child {
-      margin-bottom: 0;
-    } */
 }
 
 .el-col {
+    margin: 0 auto;
     border-radius: 2px;
 }
 
