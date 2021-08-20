@@ -1,17 +1,26 @@
 <template>
     <div class="search-root">
         <!-- 添加搜索引擎对应图标 -->
-        <!-- <el-image
-            style="width: 90px; height: 50px; position: absolute; margin-left: -100px; margin-top: -5px"
-            :src="require('@/assets/ima/fafu_logo.png')"
-            fit="contain">
-        </el-image> -->
 		<el-input  placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()">	
-            <el-select placeholder="请选择" v-model="select" slot="prepend" >
-                <el-option label="百度" value="0"></el-option>
-                <el-option label="搜狗" value="1"></el-option>
-                <el-option label="360搜索" value="2"></el-option>
-            </el-select>
+            <el-popover placement="bottom-start" width="620" slot="prepend" v-model="visible" trigger="hover">
+                <p> 搜索引擎 </p>
+                <el-row :gutter="10">
+                    <el-col :span="6" v-for="(item, index) in urlData" :key="index"> 
+                        <div class="hover-card">
+                            <div @click="selectEngine(index)">
+                                <img :src="item.picpath">
+                                <p>{{ item.title }}</p>
+                            </div>
+                        </div> 
+                    </el-col>
+                </el-row>
+                <el-image
+                    style="width: 30px; height: 30px;  vertical-align: middle; cursor: pointer;"
+                    :src="urlData[select].picpath"
+                    fit="cover" 
+                    slot="reference">
+                </el-image>
+            </el-popover>
             <el-button slot="append" icon="el-icon-search" @click="clickSearch()">
 
             </el-button>
@@ -24,47 +33,117 @@
 export default {
     data: function(){
         return{
+            visible: false,
             input: '',
             select: '0',
             urlData:[{
-                title:'baidu',
-                url: 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd='
+                title:'百度',
+                url: 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=',
+                picpath: require('@/assets/ima/baidu_search.png')
             },{
-                title:'sougou',
-                url: 'https://www.sogou.com/web?query='
+                title:'google',
+                url: 'https://www.google.com/search?q=',
+                picpath: require('@/assets/ima/google_search.png')
             },{
-                title:'360',
-                url: 'https://www.so.com/s?ie=utf-8&shb=1&src=360sou_newhome&q='
+                title:'bilibili',
+                url: 'https://search.bilibili.com/all?keyword=',
+                picpath: require('@/assets/ima/bilibili.png')
+            },{
+                title:'知乎',
+                url: 'https://www.zhihu.com/search?q=',
+                picpath: require('@/assets/ima/zhihu.png')
+            },{
+                title:'github',
+                url: 'https://github.com/search?q=',
+                picpath: require('@/assets/ima/github.png')
+            },{
+                title:'bing',
+                url: 'https://cn.bing.com/search?q=',
+                picpath: require('@/assets/ima/bing.png')
+            },{
+                title:'有道',
+                url: 'https://www.youdao.com/w/eng/',
+                picpath: require('@/assets/ima/youdao.png')
             }]
         }
     },
     methods:{
         clickSearch: function(){
             window.open(this.urlData[this.select].url + this.input);
-        }
+        },
+
+        selectEngine: function(index) {
+            this.select = index;
+            this.visible = false;   //  点击后关闭提示弹窗
+        },
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .search-root{
-	width: 30%;
-	height: 100px;
+	width: 650px;
+	height: 80px;
 	margin: 0 auto;
 	margin-top: 50px;
-}
-.el-select{
-    font-size: 20px;
-}
-
-.el-select .el-input {
-    width: 150px;
 }
 
 .input-with-select .el-input-group__prepend {
     background-color: #fff;
 }
 
+/deep/ .el-input__inner {
+    height: 50px;
+    font-size: 18px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+.hover-card img{
+    max-width: 22px;
+    vertical-align: middle; /* 对齐 */
+}
+
+.hover-card {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    min-height: 36px;
+    text-align: center;
+    color:rgb(128, 128, 128);
+}
+
+.hover-card div {
+    background-color: rgb(242, 242, 242);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hover-card p{
+    // line-height: 30px;
+    // width: 60px;
+    // background-color: aqua;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    display: inline-block; /* 转换为行内元素才可对齐 */ 
+}
+
+/deep/ .el-input-group__prepend {
+    padding-left: 13px;
+    padding-right: 13px;
+    width: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+/deep/ .el-input-group__append {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
 
 </style>
