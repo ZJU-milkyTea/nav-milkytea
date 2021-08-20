@@ -1,10 +1,16 @@
 <template>
   <div class="container">
-    <div class="circle">
+    <!-- <div class="circle">
       <a></a>
+    </div> -->
+    <div class="cup">
+      <div class="wave1"></div>
+      <div class="wave2"></div>
     </div>
+    <div class="pipe"></div>
+
     <p>
-      {{ 'CS Nav' }}
+      {{ 'eFafuCS' }}
     </p>
   </div>
 </template>
@@ -29,7 +35,8 @@ export default {
 }
 
 .container p {
-  margin-left: 230px;
+  margin-left: 490px;
+  margin-left: 45%;
   margin-top: 15px;
   position: relative;
   display: inline-block;
@@ -117,6 +124,82 @@ export default {
   100% {
     transform: rotate(-360deg);
   }
+}
+
+.cup {
+  display: inline-block;
+  position: absolute;
+  background-color: #e9f5ff;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0 0 4px 4px;
+  border-bottom: 25px;
+  height: 45px;
+  width: 30px;
+  margin: 15px 430px;
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid rgb(102, 102, 102);
+  transform: perspective(.5em) rotateX(-1.7deg);
+  animation: water-wave linear infinite;
+}
+
+.cup::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  margin-left: 9px;
+  margin-top: 2px;
+  background-color: rgb(219, 219, 219);
+  top: 0px;
+}
+
+.pipe {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 8px;
+  /* margin-left: 440px; */
+  margin-left: 40%;
+  left: 10px;
+  margin-top: 4px;
+  background-color: rgb(179, 179, 179);
+  top: 0px;
+  z-index: 1;
+}
+
+.wave1 {
+    position: relative;
+    top: 30%;
+    left: -25%;
+    background: rgb(189, 119, 38);
+    opacity: .5;
+    width: 50px;
+    height: 100px;
+    border-radius: 30%;
+    animation: inherit;
+    animation-duration: 5s;
+}
+
+.wave2 {
+    position: absolute;
+    top: 20%;
+    left: -25%;
+    background: rgb(255, 216, 133);
+    opacity: .6;
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    transform: rotate(120deg);
+    animation: inherit;
+    animation-duration: 3s;
+}
+
+@keyframes  water-wave{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 
 </style>

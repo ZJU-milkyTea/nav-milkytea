@@ -157,7 +157,16 @@ export default {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #fff;
+    line-height: 20px;
+    font-size: 20px;
+    color: #409EFF;
+    transition: 0.3s;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+/deep/ .el-input-group__append:hover {
+    background-color: #409EFF;
+    color: #fff;
 }
 
 </style>
