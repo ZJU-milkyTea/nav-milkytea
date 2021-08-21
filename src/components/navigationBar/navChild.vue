@@ -137,9 +137,9 @@ export default {
                 NavItem: [
                     {nameNav: '牛客竞赛', jumpPath: 'https://ac.nowcoder.com/acm/contest/vip-index', picPath: require('@/assets/ima/newcoder.png')},
                     {nameNav: 'AcWing', jumpPath: 'https://www.acwing.com/problem/', picPath: require('@/assets/ima/AcWing.png')},
-                    {nameNav: 'POJ（北大）', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
-                    {nameNav: 'HDU（杭电）', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
-                    {nameNav: 'ZOJ（浙大）', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
+                    {nameNav: 'POJ(北大)', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
+                    {nameNav: 'HDU(杭电)', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
+                    {nameNav: 'ZOJ(浙大)', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
                     {nameNav: 'PAT', jumpPath: 'https://pintia.cn/', picPath: require('@/assets/ima/PAT.png')},
                     {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
                     {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
@@ -236,6 +236,7 @@ export default {
 }
 
 .grid-content div {
+    white-space: nowrap;
     transition: all 0.1s linear;   /*  hover 字体放大动画 0.1s  */
 }
 
@@ -258,8 +259,8 @@ export default {
 .grid-content p {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 5px;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 15px;
     display: inline-block; /* 转换为行内元素才可对齐 */ 
 }  
 
