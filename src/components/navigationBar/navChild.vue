@@ -1,16 +1,14 @@
 <template>
     <div>
-        <!-- 行循环 -->
-        <div v-for="row in ((namelist.length + 2) / 3)" :key="row">
         <el-row :gutter="10">   
             <!-- 这里around没有作用 有效的话就完成了 -->
             <!-- 列循环 -->
-            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8" v-for="idx in 3" :key="idx">
-                <div class="container-top" v-if="namelist[(row-1) * 3 + idx - 1]">
-                    <p class="container-p"> {{ namelist[(row-1) * 3 + idx - 1].title }} </p>
+            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8" v-for="idx in namelist.length" :key="idx">
+                <div class="container-top" v-if="namelist[idx-1]">
+                    <p class="container-p"> {{ namelist[idx-1].title }} </p>
                     <el-row :gutter="5">
                         <!-- 九宫格内部循环 -->
-                        <el-col :span="8"  v-for="(item,index) in namelist[(row-1) * 3 + idx - 1].NavItem" :key="index">
+                        <el-col :span="8"  v-for="(item,index) in namelist[idx-1].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <!-- 是否显示图标， 根据路径是否为空判断 -->
                                 <div class= "grid-content-img">
@@ -23,7 +21,6 @@
                 </div>
             </el-col>
         </el-row>
-        </div>
     </div>
 </template>
 
