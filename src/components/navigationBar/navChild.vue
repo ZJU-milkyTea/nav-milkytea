@@ -1,49 +1,20 @@
 <template>
     <div>
+        <!-- 行循环 -->
+        <div v-for="row in ((namelist.length + 2) / 3)" :key="row">
         <el-row :gutter="10">   
             <!-- 这里around没有作用 有效的话就完成了 -->
-            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[0].title }} </p>
+            <!-- 列循环 -->
+            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8" v-for="idx in 3" :key="idx">
+                <div class="container-top" v-if="namelist[(row-1) * 3 + idx - 1]">
+                    <p class="container-p"> {{ namelist[(row-1) * 3 + idx - 1].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[0].NavItem" :key="index">
+                        <!-- 九宫格内部循环 -->
+                        <el-col :span="8"  v-for="(item,index) in namelist[(row-1) * 3 + idx - 1].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <!-- 是否显示图标， 1：图标+文字， 0：只有文字 -->
-                                <div class= "grid-content-img" v-if="namelist[0].visable[index] === 1">
-                                    <img :src= "item.picPath" >
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                                <div v-if="namelist[0].visable[index] === 0">
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[1].title }} </p>
-                    <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[1].NavItem" :key="index">
-                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <div>
-                                    <img :src= "item.picPath" >
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[2].title }} </p>
-                    <el-row :gutter="5">
-                        <el-col :span="8"  v-for="(item,index) in namelist[2].NavItem" :key="index">
-                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <div>
-                                    <img :src= "item.picPath" >
+                                <!-- 是否显示图标， 根据路径是否为空判断 -->
+                                <div class= "grid-content-img">
+                                    <img  v-if="item.picPath !== ''" :src= "item.picPath" >
                                     <p>{{item.nameNav}}</p>
                                 </div>
                             </div>
@@ -52,57 +23,7 @@
                 </div>
             </el-col>
         </el-row>
-
-        <!--第二行 ----------------------------------------------------------------------------->
-        <el-row :gutter="10">
-            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[3].title }} </p>
-                    <el-row :gutter="5">
-                        <el-col :span="8" v-for="(item,index) in namelist[3].NavItem" :key="index">
-                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <div>
-                                    <img :src= "item.picPath" >
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-
-            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[1].title }} </p>
-                    <el-row :gutter="5">
-                        <el-col :span="8" v-for="(item,index) in namelist[1].NavItem" :key="index">
-                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <div>
-                                    <img :src= "item.picPath" >
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-
-            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
-                <div class="container-top">
-                    <p class="container-p"> {{ namelist[2].title }} </p>
-                    <el-row :gutter="5">
-                        <el-col :span="8" v-for="(item,index) in namelist[2].NavItem" :key="index">
-                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
-                                <div>
-                                    <img :src= "item.picPath" >
-                                    <p>{{item.nameNav}}</p>
-                                </div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-        </el-row>
+        </div>
     </div>
 </template>
 
@@ -114,19 +35,19 @@ export default {
                 id: 1,
                 title: '农大 · 常用',
                 numberBlock:4,
-                visable:[1,1,1,0,0,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
+                // visable:[1,1,1,0,0,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
                 NavItem: [
                     {nameNav: '农大官网', jumpPath: 'https://www.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '计信院官网', jumpPath: 'https://xxxy.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '教务处', jumpPath: 'https://jwc.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '教务管理系统', jumpPath: 'ttps://jwgl.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '网上办事大厅', jumpPath: 'https://app.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '网络教学平台', jumpPath: 'https://jxpt.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
+                    {nameNav: '教务管理系统', jumpPath: 'ttps://jwgl.fafu.edu.cn', picPath: ''},
+                    {nameNav: '网上办事大厅', jumpPath: 'https://app.fafu.edu.cn', picPath: ''},
+                    {nameNav: '网络教学平台', jumpPath: 'https://jxpt.fafu.edu.cn', picPath: ''},
+                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: ''},
                     {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
+                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: ''},
                     {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
                 ]
             },{
@@ -137,9 +58,9 @@ export default {
                 NavItem: [
                     {nameNav: '牛客竞赛', jumpPath: 'https://ac.nowcoder.com/acm/contest/vip-index', picPath: require('@/assets/ima/newcoder.png')},
                     {nameNav: 'AcWing', jumpPath: 'https://www.acwing.com/problem/', picPath: require('@/assets/ima/AcWing.png')},
-                    {nameNav: 'POJ(北大)', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
-                    {nameNav: 'HDU(杭电)', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
-                    {nameNav: 'ZOJ(浙大)', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
+                    {nameNav: 'POJ (北大)', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
+                    {nameNav: 'HDU (杭电)', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
+                    {nameNav: 'ZOJ (浙大)', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
                     {nameNav: 'PAT', jumpPath: 'https://pintia.cn/', picPath: require('@/assets/ima/PAT.png')},
                     {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
                     {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
