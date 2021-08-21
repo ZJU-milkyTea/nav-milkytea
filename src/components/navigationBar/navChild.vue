@@ -73,9 +73,9 @@
 
             <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
-                    <p class="container-p"> {{ namelist[1].title }} </p>
+                    <p class="container-p"> {{ namelist[4].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8" v-for="(item,index) in namelist[1].NavItem" :key="index">
+                        <el-col :span="8" v-for="(item,index) in namelist[4].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <div>
                                     <img :src= "item.picPath" >
@@ -89,9 +89,60 @@
 
             <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
                 <div class="container-top">
-                    <p class="container-p"> {{ namelist[2].title }} </p>
+                    <p class="container-p"> {{ namelist[5].title }} </p>
                     <el-row :gutter="5">
-                        <el-col :span="8" v-for="(item,index) in namelist[2].NavItem" :key="index">
+                        <el-col :span="8" v-for="(item,index) in namelist[5].NavItem" :key="index">
+                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
+                                <div>
+                                    <img :src= "item.picPath" >
+                                    <p>{{item.nameNav}}</p>
+                                </div>
+                            </div>
+                        </el-col>
+                    </el-row>
+                </div>
+            </el-col>
+        </el-row>
+
+        <!--第三行 ----------------------------------------------------------------------------->
+        <el-row :gutter="10">
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
+                <div class="container-top">
+                    <p class="container-p"> {{ namelist[6].title }} </p>
+                    <el-row :gutter="5">
+                        <el-col :span="8" v-for="(item,index) in namelist[6].NavItem" :key="index">
+                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
+                                <div>
+                                    <img :src= "item.picPath" >
+                                    <p>{{item.nameNav}}</p>
+                                </div>
+                            </div>
+                        </el-col>
+                    </el-row>
+                </div>
+            </el-col>
+
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
+                <div class="container-top">
+                    <p class="container-p"> {{ namelist[7].title }} </p>
+                    <el-row :gutter="5">
+                        <el-col :span="8" v-for="(item,index) in namelist[7].NavItem" :key="index">
+                            <div class="grid-content bg-purple"  @click=clickNavChild(item)>
+                                <div>
+                                    <img :src= "item.picPath" >
+                                    <p>{{item.nameNav}}</p>
+                                </div>
+                            </div>
+                        </el-col>
+                    </el-row>
+                </div>
+            </el-col>
+
+            <el-col  :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
+                <div class="container-top">
+                    <p class="container-p"> {{ namelist[8].title }} </p>
+                    <el-row :gutter="5">
+                        <el-col :span="8" v-for="(item,index) in namelist[8].NavItem" :key="index">
                             <div class="grid-content bg-purple"  @click=clickNavChild(item)>
                                 <div>
                                     <img :src= "item.picPath" >
@@ -110,11 +161,12 @@
 export default {
     data() {
         return{
-            namelist:[{
+            namelist:[ 
+            {
                 id: 1,
                 title: '农大 · 常用',
                 numberBlock:4,
-                visable:[1,1,1,0,0,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
+                visable:[1,1,1,0,1,0,0,1,1,1,0,1],  //是否显示图标， 1：图标+文字， 0：只有文字
                 NavItem: [
                     {nameNav: '农大官网', jumpPath: 'https://www.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '计信院官网', jumpPath: 'https://xxxy.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
@@ -124,10 +176,7 @@ export default {
                     {nameNav: '网络教学平台', jumpPath: 'https://jxpt.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
+                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')}
                 ]
             },{
                 id: 2,
@@ -143,13 +192,48 @@ export default {
                     {nameNav: 'PAT', jumpPath: 'https://pintia.cn/', picPath: require('@/assets/ima/PAT.png')},
                     {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
                     {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
-                    {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')},
-                    {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
-                    {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
-                    {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')},
+                    {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')}
                 ]
             },{
                 id: 3,
+                title: '学术 · 资源',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: '知网', jumpPath: 'https://www.cnki.net/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: 'arxiv', jumpPath: 'https://arxiv.org/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '文本对比', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'NLPIndex', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: 'Sci-hub', jumpPath: 'https://gfsoso.99lb.net/sci-hub.html', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: 'PaperwithCode', jumpPath: 'https://paperswithcode.com/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: 'Connected Paper', jumpPath: 'https://www.connectedpapers.com/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            },{
+                id: 4,
+                title: '学习 · 资源',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: '菜鸟教程', jumpPath: 'https://www.runoob.com/', picPath: require('@/assets/ima/cainiao.png')},
+                    {nameNav: 'GitHub', jumpPath: 'https://github.com/', picPath: require('@/assets/ima/github.png')},
+                    {nameNav: '知乎', jumpPath: 'https://www.zhihu.com/explore', picPath: require('@/assets/ima/zhihu.png')},
+                    {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
+                    {nameNav: 'MOOC', jumpPath: 'https://www.icourse163.org/', picPath: require('@/assets/ima/MOOC.png')},
+                    {nameNav: '网易公开课', jumpPath: 'https://open.163.com/', picPath: require('@/assets/ima/wangyi_course.png')},
+                    {nameNav: 'CSDN', jumpPath: 'https://www.csdn.net/', picPath: require('@/assets/ima/wangyi_course.png')},
+                    {nameNav: '简书', jumpPath: 'https://www.jianshu.com/techareas/backend', picPath: require('@/assets/ima/w3school.png')},
+                    {nameNav: '博客园', jumpPath: 'https://www.cnblogs.com/', picPath: require('@/assets/ima/MOOC.png')}
+                    
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            },{
+                id: 5,
                 title: '效率 · 工具',
                 numberLink:5,
                 NavItem: [
@@ -161,7 +245,26 @@ export default {
                     {nameNav: '百度翻译', jumpPath: 'https://fanyi.baidu.com/?aldtype=16047#auto/zh', picPath: require('@/assets/ima/baidufanyi.png')},
                     {nameNav: 'PDF编辑', jumpPath: 'https://lightpdf.com/zh/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')}
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            },{
+                id: 6,
+                title: '工具 · 下载',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: 'utools', jumpPath: 'https://u.tools/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: 'MSDN', jumpPath: 'https://msdn.itellyou.cn/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'ourMacs', jumpPath: 'https://ourmacs.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'Deepl', jumpPath: 'https://www.deepl.com/home', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: 'diagrams', jumpPath: 'https://www.diagrams.net/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: 'Overleaf', jumpPath: 'https://www.overleaf.com/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: 'CodePen', jumpPath: 'https://codepen.io/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'tampermonkey', jumpPath: 'https://www.tampermonkey.net/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'IDE', jumpPath: 'https://www.jetbrains.com/idea/download/#section=windows', picPath: require('@/assets/ima/qqMail.png')},
                     {nameNav: 'PDF编辑', jumpPath: 'https://lightpdf.com/zh/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
@@ -171,21 +274,63 @@ export default {
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
             },{
-                id: 4,
-                title: '学习资源',
+                id: 7,
+                title: '竞赛 · 网址',
                 numberLink:5,
                 NavItem: [
-                    {nameNav: '菜鸟教程', jumpPath: 'https://www.runoob.com/', picPath: require('@/assets/ima/cainiao.png')},
-                    {nameNav: 'GitHub', jumpPath: 'https://github.com/', picPath: require('@/assets/ima/github.png')},
-                    {nameNav: '知乎', jumpPath: 'https://www.zhihu.com/explore', picPath: require('@/assets/ima/zhihu.png')},
-                    {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
-                    {nameNav: 'MOOC', jumpPath: 'https://www.icourse163.org/', picPath: require('@/assets/ima/MOOC.png')},
-                    {nameNav: '网易公开课', jumpPath: 'https://open.163.com/', picPath: require('@/assets/ima/wangyi_course.png')},
+                    {nameNav: '蓝桥杯', jumpPath: 'https://dasai.lanqiao.cn/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '天梯赛', jumpPath: 'https://gplt.patest.cn/regulation', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '百度之星', jumpPath: 'https://star.baidu.com/#/program-design-match?tab=1', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: '高教社杯', jumpPath: 'http://www.mcm.edu.cn/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: '大美赛', jumpPath: 'https://www.comap.com/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: 'MathorCup', jumpPath: 'http://www.mathorcup.org/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')}
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
-            }]  
+            },{
+                id: 8,
+                title: '大厂 · 招聘',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: '腾讯招聘', jumpPath: 'https://careers.tencent.com/home.html', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '阿里巴巴', jumpPath: 'https://talent.alibaba.com/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '字节跳动', jumpPath: 'https://jobs.bytedance.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: '百度招聘', jumpPath: 'https://talent.baidu.com/external/baidu/index.html', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: 'Google', jumpPath: 'http://careers.google.cn/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: 'Microsoft', jumpPath: 'https://careers.microsoft.com/us/en', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '华为招聘', jumpPath: 'https://career.huawei.com/reccampportal/portal5/index.html', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            },{
+                id: 9,
+                title: '影视 · 音乐',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: '优酷', jumpPath: 'https://www.youku.com/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '爱奇艺', jumpPath: 'https://www.iqiyi.com/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '腾讯视频', jumpPath: 'https://v.qq.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'Bilibili', jumpPath: 'https://www.bilibili.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: '芒果TV', jumpPath: 'https://www.mgtv.com/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: '豆瓣', jumpPath: 'https://www.douban.com/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '网易云音乐', jumpPath: 'https://music.163.com/', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'QQ音乐', jumpPath: 'https://y.qq.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'Spotify', jumpPath: 'https://open.spotify.com/', picPath: require('@/assets/ima/qqMail.png')}
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            }] 
         }
     },
     methods:{
