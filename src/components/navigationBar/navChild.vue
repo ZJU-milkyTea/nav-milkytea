@@ -131,7 +131,33 @@ export default {
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
             },{
+<<<<<<< HEAD
                 id: 6,
+=======
+                id: 7,
+                title: '竞赛 · 网址',
+                numberLink:5,
+                NavItem: [
+                    {nameNav: '蓝桥杯', jumpPath: 'https://dasai.lanqiao.cn/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '天梯赛', jumpPath: 'https://gplt.patest.cn/regulation', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: '百度之星', jumpPath: 'https://star.baidu.com/#/program-design-match?tab=1', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: '高教社杯', jumpPath: 'http://www.mcm.edu.cn/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: '大美赛', jumpPath: 'https://www.comap.com/', picPath: require('@/assets/ima/formatTrans.png')},
+                    {nameNav: 'MathorCup', jumpPath: 'http://www.mathorcup.org/', picPath: require('@/assets/ima/baidufanyi.png')},
+                    {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
+                    {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
+                   
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                ]
+            },{
+                id: 8,
+>>>>>>> fb2d61bf05e371b06be4ec3f214d1441ee9e45c0
                 title: '大厂 · 招聘',
                 numberLink:5,
                 NavItem: [
@@ -143,6 +169,7 @@ export default {
                     {nameNav: 'Microsoft', jumpPath: 'https://careers.microsoft.com/us/en', picPath: require('@/assets/ima/baidufanyi.png')},
                     {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '华为招聘', jumpPath: 'https://career.huawei.com/reccampportal/portal5/index.html', picPath: require('@/assets/ima/text_compare.png')},
+<<<<<<< HEAD
                     {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
                      {nameNav: '苏宁易购', jumpPath: 'http://careers.suning.cn/rps-web/index.htm', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '携程招聘', jumpPath: 'https://job.ctrip.com/index.html#/', picPath: require('@/assets/ima/text_compare.png')},
@@ -170,6 +197,11 @@ export default {
                     {nameNav: '什么值得买', jumpPath: 'https://www.smzdm.com/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '美团', jumpPath: 'https://www.meituan.com/', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: '12306', jumpPath: 'https://www.12306.cn/index/', picPath: require('@/assets/ima/qqMail.png')}
+=======
+                    // {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    // {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
+                   
+>>>>>>> fb2d61bf05e371b06be4ec3f214d1441ee9e45c0
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -189,6 +221,7 @@ export default {
                     {nameNav: '网易云音乐', jumpPath: 'https://music.163.com/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: 'QQ音乐', jumpPath: 'https://y.qq.com/', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'Spotify', jumpPath: 'https://open.spotify.com/', picPath: require('@/assets/ima/qqMail.png')},
+<<<<<<< HEAD
                     {nameNav: '斗鱼直播', jumpPath: 'https://www.douyu.com/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '新浪微博', jumpPath: 'https://weibo.com/', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'Youtube', jumpPath: 'https://www.youtube.com/', picPath: require('@/assets/ima/qqMail.png')}
@@ -214,6 +247,9 @@ export default {
                     {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')}
+=======
+                
+>>>>>>> fb2d61bf05e371b06be4ec3f214d1441ee9e45c0
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
