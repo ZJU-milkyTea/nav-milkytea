@@ -36,7 +36,8 @@ export default {
 
 .container p {
   margin-left: 490px;
-  margin-left: 45%;
+  margin-left: 40%;
+  left: 60px;
   margin-top: 15px;
   position: relative;
   display: inline-block;
