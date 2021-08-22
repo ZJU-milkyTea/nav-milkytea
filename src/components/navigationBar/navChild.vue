@@ -152,8 +152,7 @@ export default {
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                 ]
-            },
-            {
+            },{
                 id: 7,
                 title: '购物 · 网站',
                 numberLink:5,
