@@ -206,4 +206,15 @@ export default {
     line-height: 18px;
 }
 
+@media only screen and (max-width: 380px) {
+    .grid-content p {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 5px;
+        font-size: 10px;
+        line-height: 10px;
+        display: inline-block; /* 转换为行内元素才可对齐 */ 
+    }  
+}
+
+
 </style>
