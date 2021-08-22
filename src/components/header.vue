@@ -10,7 +10,7 @@
     <div class="pipe"></div>
 
     <p>
-      {{ 'eFafuCS' }}
+      {{ 'eFafucs' }}
     </p>
   </div>
 </template>
