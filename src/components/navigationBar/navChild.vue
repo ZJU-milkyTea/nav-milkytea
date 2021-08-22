@@ -169,7 +169,7 @@ export default {
                     {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')},
                     {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')}
+                   
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -188,10 +188,9 @@ export default {
                     {nameNav: 'Microsoft', jumpPath: 'https://careers.microsoft.com/us/en', picPath: require('@/assets/ima/baidufanyi.png')},
                     {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '华为招聘', jumpPath: 'https://career.huawei.com/reccampportal/portal5/index.html', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
-                     {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
-                    {nameNav: '华为招聘', jumpPath: 'https://career.huawei.com/reccampportal/portal5/index.html', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    // {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/qqMail.png')},
+                    // {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/pdf_online.png')},
+                   
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -211,9 +210,7 @@ export default {
                     {nameNav: '网易云音乐', jumpPath: 'https://music.163.com/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: 'QQ音乐', jumpPath: 'https://y.qq.com/', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'Spotify', jumpPath: 'https://open.spotify.com/', picPath: require('@/assets/ima/qqMail.png')},
-                    {nameNav: '网易云音乐', jumpPath: 'https://music.163.com/', picPath: require('@/assets/ima/pdf_online.png')},
-                    {nameNav: 'QQ音乐', jumpPath: 'https://y.qq.com/', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'Spotify', jumpPath: 'https://open.spotify.com/', picPath: require('@/assets/ima/qqMail.png')}
+                
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
