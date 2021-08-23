@@ -27,14 +27,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container{
-  width: 90%;
-  height: 800px;
-  margin: 0 auto;
-  padding-top: 25px;
-  background-color: rgb(242, 242, 242);
-  /* padding-top: 50px; */
+@media only screen and (min-width: 1480px){
+	.container{
+		width: 70%;
+		height: 800px;
+		margin: 0 auto;
+		background-color: rgb(242, 242, 242);
+		/* padding-top: 50px; */
+	}
 }
+
+@media only screen and (min-width: 100px) and (max-width: 1480px){
+	.container{
+		width: 100%;
+		height: 800px;
+		margin: 0 auto;
+		background-color: rgb(242, 242, 242);
+		/* padding-top: 50px; */
+	}
+}
+
+
+
 
 
 

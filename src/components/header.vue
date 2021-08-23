@@ -60,8 +60,9 @@ export default {
 }
 
 .container p {
+  /* margin-left: 490px; */
   margin-left: 40%;
-  left: 3.8rem;
+  left:3.8rem;
   margin-top: 15px;
   position: relative;
   display: inline-block;
