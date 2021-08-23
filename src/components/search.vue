@@ -168,43 +168,20 @@ export default {
     color: #fff;
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1440px) {
     .search-root {
-        width: 35%;
+        width: 30%;
     }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1800px) {
-    .search-root {
-        width: 40%;
-    }
-}
 
-@media only screen and (min-width: 1500px) and (max-width: 1600px) {
-    .search-root {
-        width: 45%;
-    }
-}
-
-@media only screen and (min-width: 1400px) and (max-width: 1500px) {
-    .search-root {
-        width: 50%;
-    }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1400px)  {
+@media only screen and (min-width: 1080px) and (max-width: 1440px)  {
     .search-root {
         width: 60%;
     }
 }
 
-@media only screen and (min-width: 940px) and (max-width: 1200px)  {
-    .search-root {
-        width: 70%;
-    }
-}
-
-@media only screen and (min-width: 100px) and (max-width: 940px) {
+@media only screen and (min-width: 100px) and (max-width: 1080px) {
     .search-root {
         width: 90%;
     }
