@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .container{
   width:100%;
-  height: 60px;
+  height: 70px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
 }
@@ -37,15 +37,15 @@ export default {
 .container p {
   /* margin-left: 490px; */
   margin-left: 40%;
-  left:3.8rem;
+  left:60px;
   margin-top: 15px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 35px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 35px;
 }
 
 .circle {
@@ -134,8 +134,8 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0 0 4px 4px;
   border-bottom: 25px;
-  height: 39px;
-  width: 26px;
+  height: 45px;
+  width: 30px;
   margin: 15px 430px;
   margin-left: 40%;
   display: flex;
@@ -149,7 +149,7 @@ export default {
 .cup::before {
   content: '';
   position: absolute;
-  width: 0.4rem;
+  width: 6px;
   height: 40px;
   margin-left: 9px;
   margin-top: 2px;
@@ -160,7 +160,7 @@ export default {
 .pipe {
   content: '';
   position: absolute;
-  width: 5px;
+  width: 6px;
   height: 8px;
   /* margin-left: 440px; */
   margin-left: 40%;
