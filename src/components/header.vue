@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :style="'width:'+fullWdith+'px;'">
     <!-- <div class="circle">
       <a></a>
     </div> -->
@@ -19,8 +19,34 @@
 export default {
   data: function(){
       return{
-          msg: '123'
+          msg: '123',
+          fullWdith: document.documentElement.clientWdith
       }
+  },
+  watch: {
+    fullWdith (val) {//监控浏览器高度变化
+      if(!this.timer) {
+        this.fullWdith = val
+        this.timer = true
+        //console.log(this.fullWdith)
+        setTimeout(function (){
+          this.timer = false
+        },400)
+      }	
+		}
+  },
+  mounted () {
+    this.get_bodyWidth()
+  },
+  methods :{
+    get_bodyWidth () {//动态获取浏览器高度
+      window.onresize = () => {
+        return (() => {
+          window.fullWdith = document.documentElement.clientWidth
+          this.fullWdith = window.fullWdith
+        })()
+      }
+    }
   }
 }
 </script>
@@ -28,24 +54,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-  width: 100%;
-  height: 70px;
+  height: 60px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
 }
 
 .container p {
-  margin-left: 490px;
   margin-left: 40%;
-  left: 60px;
+  left: 3.8rem;
   margin-top: 15px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 35px;
+  line-height: 28px;
 }
 
 .circle {
@@ -134,8 +158,8 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0 0 4px 4px;
   border-bottom: 25px;
-  height: 45px;
-  width: 30px;
+  height: 39px;
+  width: 26px;
   margin: 15px 430px;
   margin-left: 40%;
   display: flex;
@@ -149,7 +173,7 @@ export default {
 .cup::before {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 0.4rem;
   height: 40px;
   margin-left: 9px;
   margin-top: 2px;
@@ -160,7 +184,7 @@ export default {
 .pipe {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 5px;
   height: 8px;
   /* margin-left: 440px; */
   margin-left: 40%;
