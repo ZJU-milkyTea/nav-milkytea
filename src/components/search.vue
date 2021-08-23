@@ -93,10 +93,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .search-root{
-    width: 46%;
-	height: 80px;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .el-popover p{
@@ -169,7 +168,20 @@ export default {
     color: #fff;
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (min-width: 1440px) {
+    .search-root {
+        width: 30%;
+    }
+}
+
+
+@media only screen and (min-width: 1080px) and (max-width: 1440px)  {
+    .search-root {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1080px) {
     .search-root {
         width: 90%;
     }
