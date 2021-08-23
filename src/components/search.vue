@@ -93,9 +93,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .search-root{
-	height: 80px;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .el-popover p{
