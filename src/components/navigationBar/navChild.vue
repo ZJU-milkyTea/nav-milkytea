@@ -61,8 +61,8 @@ export default {
                     {nameNav: '简书', jumpPath: 'https://www.jianshu.com/techareas/backend', picPath: require('@/assets/ima/jianshu.png')},
                     {nameNav: '博客园', jumpPath: 'https://www.cnblogs.com/', picPath: require('@/assets/ima/boke.png')},
                     {nameNav: 'infoQ', jumpPath: 'https://www.infoq.cn/', picPath: require('@/assets/ima/infoQ.webp')},
-                    {nameNav: 'Cnode', jumpPath: 'https://cnodejs.org/', picPath: require('@/assets/ima/cnode.svg')},
-                    {nameNav: '掘金', jumpPath: 'https://juejin.cn/', picPath: require('@/assets/ima/juejin.svg')}
+                    {nameNav: 'Cnode', jumpPath: 'https://cnodejs.org/', picPath: require('@/assets/ima/cnode.png')},
+                    {nameNav: '掘金', jumpPath: 'https://juejin.cn/', picPath: require('@/assets/ima/juejin.png')}
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
