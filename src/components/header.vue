@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :style="'width:'+fullWdith+'px;'">
+  <div class="container">
     <!-- <div class="circle">
       <a></a>
     </div> -->
@@ -19,34 +19,8 @@
 export default {
   data: function(){
       return{
-          msg: '123',
-          fullWdith: document.documentElement.clientWdith
+          msg: '123'
       }
-  },
-  watch: {
-    fullWdith (val) {//监控浏览器高度变化
-      if(!this.timer) {
-        this.fullWdith = val
-        this.timer = true
-        //console.log(this.fullWdith)
-        setTimeout(function (){
-          this.timer = false
-        },400)
-      }	
-		}
-  },
-  mounted () {
-    this.get_bodyWidth()
-  },
-  methods :{
-    get_bodyWidth () {//动态获取浏览器高度
-      window.onresize = () => {
-        return (() => {
-          window.fullWdith = document.documentElement.clientWidth
-          this.fullWdith = window.fullWdith
-        })()
-      }
-    }
   }
 }
 </script>
@@ -54,6 +28,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
+  width:100%;
   height: 60px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
