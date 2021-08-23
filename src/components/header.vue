@@ -6,8 +6,9 @@
     <div class="cup">
       <div class="wave1"></div>
       <div class="wave2"></div>
+      <a></a>
     </div>
-    <div class="pipe"></div>
+    <!-- <div class="pipe"></div> -->
 
     <p>
       {{ 'eFafuCS' }}
@@ -130,23 +131,39 @@ export default {
 .cup {
   display: inline-block;
   position: absolute;
-  background-color: #e9f5ff;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 0 0 4px 4px;
+  background-color: #cce8ff;
+  /* border: 2px solid rgb(0, 0, 0); */
+  border-radius: 30%;
   border-bottom: 25px;
-  height: 45px;
-  width: 30px;
-  margin: 15px 430px;
-  margin-left: 40%;
+  height: 55px;
+  width: 55px;
+  margin: 8px 430px;
+  margin-left: 39%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 2px solid rgb(102, 102, 102);
-  transform: perspective(.5em) rotateX(-1.7deg);
+  /* border: 2px solid rgb(75, 132, 255); */
+  /* transform: perspective(.5em) rotateX(-1.7deg); */
   animation: water-wave linear infinite;
 }
 
-.cup::before {
+.cup a {
+  margin-left: 10px;
+  margin-top: 5px;
+  max-width: 30px;
+  width: 30px;
+  height: 35px;
+  vertical-align: middle; 
+  background-image: url('../assets/ima/boat.png');
+  background-repeat:no-repeat;
+  background-size:35px 35px;
+  display: inline-block;
+  position: relative;
+  animation: float 1.5s ease-in-out infinite;
+  border: 2px;
+}
+
+/* .cup::before {
   content: '';
   position: absolute;
   width: 6px;
@@ -155,52 +172,64 @@ export default {
   margin-top: 2px;
   background-color: rgb(219, 219, 219);
   top: 0px;
-}
+} */
 
-.pipe {
+/* .pipe {
   content: '';
   position: absolute;
   width: 6px;
   height: 8px;
-  /* margin-left: 440px; */
   margin-left: 40%;
   left: 10px;
   margin-top: 4px;
   background-color: rgb(179, 179, 179);
   top: 0px;
   z-index: 1;
-}
+} */
 
 .wave1 {
-    position: relative;
-    top: 30%;
-    left: -25%;
-    background: rgb(189, 119, 38);
-    opacity: .5;
-    width: 50px;
-    height: 100px;
-    border-radius: 30%;
+    position: absolute;
+    top: 60%;
+    left: -97%;
+    background: rgb(119, 189, 255);
+    opacity: .6;
+    width: 200px;
+    height: 200px;
+    border-radius: 42%;
+    transform: rotate(120deg);
     animation: inherit;
-    animation-duration: 5s;
+    animation-duration: 6s;
 }
 
 .wave2 {
     position: absolute;
-    top: 20%;
-    left: -25%;
-    background: rgb(255, 216, 133);
+    top: 66%;
+    left: -97%;
+    background: rgb(35, 149, 255);
     opacity: .6;
-    width: 50px;
-    height: 50px;
-    border-radius: 40%;
-    transform: rotate(120deg);
+    width: 200px;
+    height: 200px;
+    border-radius: 42%;
+    transform: rotate(0deg);
     animation: inherit;
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 
 @keyframes  water-wave{
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 </style>
