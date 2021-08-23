@@ -93,7 +93,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .search-root{
-    width: 46%;
 	height: 80px;
 	margin: 0 auto;
 	margin-top: 50px;
@@ -169,7 +168,43 @@ export default {
     color: #fff;
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (min-width: 1800px) {
+    .search-root {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1800px) {
+    .search-root {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1600px) {
+    .search-root {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1500px) {
+    .search-root {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px)  {
+    .search-root {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 940px) and (max-width: 1200px)  {
+    .search-root {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 940px) {
     .search-root {
         width: 90%;
     }
