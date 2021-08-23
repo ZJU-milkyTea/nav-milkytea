@@ -132,7 +132,6 @@ export default {
   display: inline-block;
   position: absolute;
   background-color: #cce8ff;
-  /* border: 2px solid rgb(0, 0, 0); */
   border-radius: 30%;
   border-bottom: 25px;
   height: 55px;
