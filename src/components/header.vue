@@ -30,21 +30,21 @@ export default {
 <style scoped>
 .container{
   width: 100%;
-  height: 70px;
+  height: 55px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
 }
 
 .container p {
   /* margin-left: 490px; */
-  margin-left: 40%;
+  margin-left: 25%;
   left: 60px;
-  margin-top: 15px;
+  margin-top: 8px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 35px;
 }
@@ -134,10 +134,10 @@ export default {
   background-color: #cce8ff;
   border-radius: 30%;
   border-bottom: 25px;
-  height: 55px;
-  width: 55px;
-  margin: 8px 430px;
-  margin-left: 39%;
+  height: 45px;
+  width: 45px;
+  margin: 5px 430px;
+  margin-left: 25%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -147,15 +147,15 @@ export default {
 }
 
 .cup a {
-  margin-left: 10px;
+  margin-left: 9px;
   margin-top: 5px;
   max-width: 30px;
-  width: 30px;
-  height: 35px;
+  width: 26px;
+  height: 30px;
   vertical-align: middle; 
   background-image: url('../assets/ima/boat.png');
   background-repeat:no-repeat;
-  background-size:35px 35px;
+  background-size:26px 30px;
   display: inline-block;
   position: relative;
   animation: float 1.5s ease-in-out infinite;
@@ -189,7 +189,7 @@ export default {
 .wave1 {
     position: absolute;
     top: 60%;
-    left: -97%;
+    left: -130%;
     background: rgb(119, 189, 255);
     opacity: .6;
     width: 200px;
@@ -203,7 +203,7 @@ export default {
 .wave2 {
     position: absolute;
     top: 66%;
-    left: -97%;
+    left: -127%;
     background: rgb(35, 149, 255);
     opacity: .6;
     width: 200px;
@@ -224,7 +224,7 @@ export default {
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(20%);
+    transform: translateY(15%);
   }
   100% {
     transform: translateY(0%);
