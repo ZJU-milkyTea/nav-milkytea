@@ -2,7 +2,7 @@
     <div class="search-root">
         <!-- 添加搜索引擎对应图标 -->
 		<el-input id = "search-input" placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()" ref="searchInput">	
-            <el-popover placement="bottom-start" width="620" slot="prepend" v-model="visible" trigger="hover">
+            <el-popover placement="bottom-start" slot="prepend" v-model="visible" trigger="hover">
                 <p> 搜索引擎: </p>
                 <el-row :gutter="10">
                     <el-col :span="6" v-for="(item, index) in urlData" :key="index"> 
@@ -93,7 +93,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .search-root{
-	width: 650px;
+    width: 46%;
 	height: 80px;
 	margin: 0 auto;
 	margin-top: 50px;
@@ -167,6 +167,12 @@ export default {
 /deep/ .el-input-group__append:hover {
     background-color: #409EFF;
     color: #fff;
+}
+
+@media only screen and (max-width: 940px) {
+    .search-root {
+        width: 90%;
+    }
 }
 
 </style>
