@@ -158,7 +158,7 @@ export default {
   background-size:26px 30px;
   display: inline-block;
   position: relative;
-  animation: float 1.5s ease-in-out infinite;
+  animation: float 1.5s linear infinite;
   border: 2px;
 }
 
@@ -221,13 +221,24 @@ export default {
 
 @keyframes float {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0%) rotate(0deg);
+    transform-origin: bottom;
+  }
+  25% {
+    transform: translateY(7.5%) rotate(-7deg);
+    transform-origin: bottom;
   }
   50% {
-    transform: translateY(15%);
+    transform: translateY(15%) rotate(0deg);
+    transform-origin: bottom;
+  }
+  75% {
+    transform: translateY(7.5%) rotate(7deg);
+    transform-origin: bottom;
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0%) rotate(0deg);
+    transform-origin: bottom;
   }
 }
 
