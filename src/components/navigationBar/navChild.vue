@@ -34,39 +34,37 @@ export default {
                 title: '农大 · 常用',
                 numberBlock:4,
                 NavItem: [
+                    //农大相关的图标不要只用一样的
                     {nameNav: '农大官网', jumpPath: 'https://www.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '计信院官网', jumpPath: 'https://xxxy.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '教务处', jumpPath: 'https://jwc.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '教务管理系统', jumpPath: 'ttps://jwgl.fafu.edu.cn', picPath: ''},
+                    {nameNav: '教务处', jumpPath: 'https://jwc.fafu.edu.cn', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '网上办事大厅', jumpPath: 'https://app.fafu.edu.cn', picPath: ''},
                     {nameNav: '网络教学平台', jumpPath: 'https://jxpt.fafu.edu.cn', picPath: ''},
-                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: ''},
-                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: ''},
-                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
+                    {nameNav: '财务处', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: ''},  //链接
+                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},  //替换
+                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},//替换
+                    {nameNav: '信息公开网', jumpPath: 'https://xxgk.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},//替换
+                    {nameNav: '后勤管理处', jumpPath: 'http://hq.fafu.edu.cn/', picPath: ''},//替换
+                    {nameNav: '校医院', jumpPath: 'http://hq.fafu.edu.cn/', picPath: require('@/assets/ima/fafu_logo.png')},//替换
                 ]
             },{
                 id: 2,
                 title: '学习 · 网站',
                 numberLink:5,
                 NavItem: [
-                    {nameNav: '菜鸟教程', jumpPath: 'https://www.runoob.com/', picPath: require('@/assets/ima/cainiao.png')},
-                    {nameNav: 'GitHub', jumpPath: 'https://github.com/', picPath: require('@/assets/ima/github.png')},
+                    {nameNav: 'CSDN', jumpPath: 'https://www.csdn.net/', picPath: require('@/assets/ima/csdn.png')},
                     {nameNav: '知乎', jumpPath: 'https://www.zhihu.com/explore', picPath: require('@/assets/ima/zhihu.png')},
-                    {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
                     {nameNav: 'MOOC', jumpPath: 'https://www.icourse163.org/', picPath: require('@/assets/ima/MOOC.png')},
                     {nameNav: '网易公开课', jumpPath: 'https://open.163.com/', picPath: require('@/assets/ima/wangyi_course.png')},
-                    {nameNav: 'CSDN', jumpPath: 'https://www.csdn.net/', picPath: require('@/assets/ima/csdn.png')},
-                    {nameNav: '简书', jumpPath: 'https://www.jianshu.com/techareas/backend', picPath: require('@/assets/ima/jianshu.png')},
-                    {nameNav: '博客园', jumpPath: 'https://www.cnblogs.com/', picPath: require('@/assets/ima/boke.png')},
+                    {nameNav: 'GitHub', jumpPath: 'https://github.com/', picPath: require('@/assets/ima/github.png')},
+                    {nameNav: 'gitee', jumpPath: 'https://cnodejs.org/', picPath: require('@/assets/ima/cnode.png')},//这个图标要换成gitee的
+                    {nameNav: '掘金', jumpPath: 'https://juejin.cn/', picPath: require('@/assets/ima/juejin.png')},
                     {nameNav: 'infoQ', jumpPath: 'https://www.infoq.cn/', picPath: require('@/assets/ima/infoQ.webp')},
-                    {nameNav: 'Cnode', jumpPath: 'https://cnodejs.org/', picPath: require('@/assets/ima/cnode.png')},
-                    {nameNav: '掘金', jumpPath: 'https://juejin.cn/', picPath: require('@/assets/ima/juejin.png')}
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    {nameNav: '博客园', jumpPath: 'https://www.cnblogs.com/', picPath: require('@/assets/ima/boke.png')},
+                    {nameNav: 'W3school', jumpPath: 'https://www.w3school.com.cn/', picPath: require('@/assets/ima/w3school.png')},
+                    {nameNav: '菜鸟教程', jumpPath: 'https://www.runoob.com/', picPath: require('@/assets/ima/cainiao.png')},
+                    {nameNav: '简书', jumpPath: 'https://www.jianshu.com/techareas/backend', picPath: require('@/assets/ima/jianshu.png')}, 
                 ]
             },{
                 id: 3,
@@ -74,18 +72,20 @@ export default {
                 numberLink:5,
                 testNumber:[1,1,2,3],
                 NavItem: [
+                    {nameNav: 'PAT', jumpPath: 'https://pintia.cn/', picPath: require('@/assets/ima/PAT.png')},
                     {nameNav: '牛客竞赛', jumpPath: 'https://ac.nowcoder.com/acm/contest/vip-index', picPath: require('@/assets/ima/newcoder.png')},
                     {nameNav: 'AcWing', jumpPath: 'https://www.acwing.com/problem/', picPath: require('@/assets/ima/AcWing.png')},
-                    {nameNav: 'POJ (北大)', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
-                    {nameNav: 'HDU (杭电)', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
-                    {nameNav: 'ZOJ (浙大)', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
-                    {nameNav: 'PAT', jumpPath: 'https://pintia.cn/', picPath: require('@/assets/ima/PAT.png')},
                     {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
                     {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
                     {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')},
-                    {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
-                    {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
-                    {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')}
+                    {nameNav: 'Codeforce', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')}, //链接，图标更换
+                    {nameNav: 'FAFUOJ', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')}, //链接，图标
+                    {nameNav: 'VOJ', jumpPath: 'https://vjudge.ppsucxtt.cn/', picPath: require('@/assets/ima/lanqiao.png')},
+                    {nameNav: 'POJ', jumpPath: 'http://poj.org/', picPath: require('@/assets/ima/POJ.png')},
+                    {nameNav: 'HDU', jumpPath: 'https://acm.hdu.edu.cn/', picPath: require('@/assets/ima/HDU.png')},
+                    {nameNav: 'ZOJ', jumpPath: 'https://zoj.pintia.cn/home', picPath: require('@/assets/ima/ZOJ.png')},
+                    
+                   
                 ]
             },{
                 id: 4,
@@ -95,14 +95,16 @@ export default {
                     {nameNav: '知网', jumpPath: 'https://www.cnki.net/', picPath: require('@/assets/ima/zhiwang.png')},
                     {nameNav: 'arxiv', jumpPath: 'https://arxiv.org/', picPath: require('@/assets/ima/arxiv.png')},
                     {nameNav: '文本对比', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'NLPIndex', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/nlp.png')},
+                    {nameNav: 'NLPIndex', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/nlp.png')}, //替换
                     {nameNav: 'Sci-hub', jumpPath: 'https://gfsoso.99lb.net/sci-hub.html', picPath: require('@/assets/ima/scihub.png')},
-                    {nameNav: 'PaperwithCode', jumpPath: 'https://paperswithcode.com/', picPath: require('@/assets/ima/paper.png')},
-                    {nameNav: 'Connected Paper', jumpPath: 'https://www.connectedpapers.com/', picPath: require('@/assets/ima/connect.png')},
-                    {nameNav: '百度学术', jumpPath: 'https://xueshu.baidu.com/', picPath: require('@/assets/ima/baidu_search.png')},
-                    {nameNav: 'softonic', jumpPath: 'https://en.softonic.com/', picPath: require('@/assets/ima/soft.png')},
-                    {nameNav: '荔枝数码', jumpPath: 'https://www.lizhi.io/', picPath: require('@/assets/ima/lizhi.png')},
-                    {nameNav: '中科大镜像', jumpPath: 'http://mirrors.ustc.edu.cn/', picPath: require('@/assets/ima/ustc.png')},
+
+                    {nameNav: 'PaperwithCode', jumpPath: 'https://paperswithcode.com/', picPath: require('@/assets/ima/paper.png')}, //替换
+                    {nameNav: 'Connected Paper', jumpPath: 'https://www.connectedpapers.com/', picPath: require('@/assets/ima/connect.png')}, //替换
+                    {nameNav: '百度学术', jumpPath: 'https://xueshu.baidu.com/', picPath: require('@/assets/ima/baidu.png')},
+                    {nameNav: 'softonic', jumpPath: 'https://en.softonic.com/', picPath: require('@/assets/ima/qqMail.png')},//替换
+                    {nameNav: '荔枝数码', jumpPath: 'https://www.lizhi.io/', picPath: require('@/assets/ima/lizhi.png')},//替换
+                    {nameNav: '中科大镜像', jumpPath: 'http://mirrors.ustc.edu.cn/', picPath: require('@/assets/ima/ustc.png')},//替换
+
                     {nameNav: 'Linux命令', jumpPath: 'https://man.linuxde.net/', picPath: require('@/assets/ima/linux.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -118,18 +120,14 @@ export default {
                     {nameNav: 'PDF编辑', jumpPath: 'https://lightpdf.com/zh/', picPath: require('@/assets/ima/pdf_online.png')},
                     {nameNav: '文本对比', jumpPath: 'https://www.jq22.com/textDifference', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'QQ邮箱', jumpPath: 'https://mail.qq.com/', picPath: require('@/assets/ima/qqMail.png')},
-                     {nameNav: 'utools', jumpPath: 'https://u.tools/', picPath: require('@/assets/ima/utools.png')},
-                    {nameNav: 'Speedtest', jumpPath: 'https://www.speedtest.net/', picPath: require('@/assets/ima/speed.png')},
-                    {nameNav: '域名比价', jumpPath: 'https://www.domcomp.com/', picPath: require('@/assets/ima/domain.png')},
-                    {nameNav: 'MSDN', jumpPath: 'https://msdn.itellyou.cn/', picPath: require('@/assets/ima/msdn.png')},
-                    {nameNav: 'ourMacs', jumpPath: 'https://ourmacs.com/', picPath: require('@/assets/ima/mac.png')},
-                    {nameNav: 'Deepl', jumpPath: 'https://www.deepl.com/home', picPath: require('@/assets/ima/DeepL.svg')},
-                    {nameNav: 'diagrams', jumpPath: 'https://www.diagrams.net/', picPath: require('@/assets/ima/dia.png')},
-                    {nameNav: 'Overleaf', jumpPath: 'https://www.overleaf.com/', picPath: require('@/assets/ima/leaf.png')}
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    {nameNav: '网易邮箱', jumpPath: 'https://u.tools/', picPath: require('@/assets/ima/utools.png')},  //图标，链接
+                    {nameNav: 'Speedtest', jumpPath: 'https://www.speedtest.net/', picPath: require('@/assets/ima/speed.png')}, //替换
+                    {nameNav: '阿里云', jumpPath: 'https://www.domcomp.com/', picPath: require('@/assets/ima/domain.png')},//图标，链接
+                    {nameNav: '腾讯云', jumpPath: 'https://msdn.itellyou.cn/', picPath: require('@/assets/ima/msdn.png')},//图标，链接
+                    {nameNav: 'ourMacs', jumpPath: 'https://ourmacs.com/', picPath: require('@/assets/ima/mac.png')}, //替换
+                    {nameNav: 'Deepl', jumpPath: 'https://www.deepl.com/home', picPath: require('@/assets/ima/DeepL.svg')},//替换
+                    {nameNav: 'diagrams', jumpPath: 'https://www.diagrams.net/', picPath: require('@/assets/ima/dia.png')},//替换
+                    {nameNav: 'Overleaf', jumpPath: 'https://www.overleaf.com/', picPath: require('@/assets/ima/leaf.svg')}//替换
                 ]
             },{
                 id: 6,
@@ -145,13 +143,8 @@ export default {
                     {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/wangyi.png')},
                     {nameNav: '华为招聘', jumpPath: 'https://career.huawei.com/reccampportal/portal5/index.html', picPath: require('@/assets/ima/huawei.png')},
                     {nameNav: '美团招聘', jumpPath: 'https://campus.meituan.com/', picPath: require('@/assets/ima/mei.png')},
-                    {nameNav: '苏宁易购', jumpPath: 'http://careers.suning.cn/rps-web/index.htm', picPath: require('@/assets/ima/suning.png')},
-                    {nameNav: '携程招聘', jumpPath: 'https://job.ctrip.com/index.html#/', picPath: require('@/assets/ima/xiecheng.png')},
-                    {nameNav: '科大讯飞', jumpPath: 'https://iflytek.cheng95.com/other/campus', picPath: require('@/assets/ima/keda.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
-                    // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
+                    {nameNav: '牛客', jumpPath: 'http://careers.suning.cn/rps-web/index.htm', picPath: require('@/assets/ima/suning.png')},//图标，链接
+                    {nameNav: '脉脉', jumpPath: 'https://maimai.cn/article/headline', picPath: require('@/assets/ima/xiecheng.png')},//图标，链接
                 ]
             },{
                 id: 7,
@@ -189,7 +182,7 @@ export default {
                     {nameNav: '网易云音乐', jumpPath: 'https://music.163.com/', picPath: require('@/assets/ima/163.png')},
                     {nameNav: 'QQ音乐', jumpPath: 'https://y.qq.com/', picPath: require('@/assets/ima/qq.png')},
                     {nameNav: 'Spotify', jumpPath: 'https://open.spotify.com/', picPath: require('@/assets/ima/spotify.png')},
-                    {nameNav: '斗鱼直播', jumpPath: 'https://www.douyu.com/', picPath: require('@/assets/ima/douyu.png')},
+                    {nameNav: '虎牙', jumpPath: 'https://www.douyu.com/', picPath: require('@/assets/ima/douyu.png')},  //链接，图标
                     {nameNav: '新浪微博', jumpPath: 'https://weibo.com/', picPath: require('@/assets/ima/weibo.png')},
                     {nameNav: 'Youtube', jumpPath: 'https://www.youtube.com/', picPath: require('@/assets/ima/youtube.jpg')}
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -209,11 +202,6 @@ export default {
                     {nameNav: '大美赛', jumpPath: 'https://www.comap.com/', picPath: require('@/assets/ima/formatTrans.png')},
                     {nameNav: 'MathorCup', jumpPath: 'http://www.mathorcup.org/', picPath: require('@/assets/ima/baidufanyi.png')},
                     {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
-                    {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')},
-                    {nameNav: '锐智杯', jumpPath: 'http://www.dfrzedu.com/index.php/ruizhi_bei.html', picPath: require('@/assets/ima/pdf_online.png')},
-                    {nameNav: 'CRAIC', jumpPath: 'https://craic.yuntop.com/#/index', picPath: require('@/assets/ima/text_compare.png')},
-                    {nameNav: 'kaggle', jumpPath: 'https://www.kaggle.com/', picPath: require('@/assets/ima/qqMail.png')}
                 ]
             }] 
         }
