@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <el-row :gutter="10" justify="center">   
             <!-- 列循环 -->
             <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8" v-for="idx in namelist.length" :key="idx">
@@ -208,7 +208,8 @@ export default {
     },
     methods:{
         clickNavChild: function(item){
-            this.$emit('childevent',!this.isjump);
+            // this.$emit('childevent',!this.isjump);
+            this.$bus.$emit('aevent', !this.isjump);
             window.open(item.jumpPath);
             //this.isjump=!this.isjump
             //console.log(this.isjump)
@@ -321,6 +322,26 @@ export default {
         line-height: 10px;
         display: inline-block; /* 转换为行内元素才可对齐 */ 
     }  
+}
+
+@media only screen and (min-width: 1480px){
+	.container{
+		width: 70%;
+		height: 800px;
+		margin: 0 auto;
+		background-color: rgb(242, 242, 242);
+		/* padding-top: 50px; */
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1480px){
+	.container{
+		width: 100%;
+		height: 800px;
+		margin: 0 auto;
+		background-color: rgb(242, 242, 242);
+		/* padding-top: 50px; */
+	}
 }
 
 
