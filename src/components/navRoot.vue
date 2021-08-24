@@ -3,7 +3,7 @@
     
     <!-- 用父子传message的形式来决定每个nav的子nav中的图片和链接跳转放哪个， 最子的NAV通过message来选择图片和链接 -->
 
-    <nav-top :message="0">
+    <nav-top :message="0" @childevent='wathChildEvent'>
 
     </nav-top>
 
@@ -21,6 +21,12 @@ export default {
         return{
 
         }
+    },
+	methods:{
+        wathChildEvent:function(vals){
+            //console.log(vals);
+			this.$bus.$emit('aevent', vals);
+        } 
     }
 }
 </script>

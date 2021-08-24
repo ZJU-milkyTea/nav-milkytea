@@ -27,6 +27,7 @@
 export default {
     data() {
         return{
+            ifjump:false,
             namelist:[ 
             {
                 id: 1,
@@ -219,7 +220,10 @@ export default {
     },
     methods:{
         clickNavChild: function(item){
+            this.$emit('childevent',!this.isjump);
             window.open(item.jumpPath);
+            //this.isjump=!this.isjump
+            //console.log(this.isjump)
         },
         test: function(index){
             console.log("index : " + index);
