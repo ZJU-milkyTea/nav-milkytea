@@ -33,6 +33,7 @@
 export default {
     data: function(){
         return{
+            isjump: false,
             visible: false,
             input: '',
             select: '0',
@@ -75,11 +76,23 @@ export default {
         selectEngine: function(index) {
             this.select = index;
             this.visible = false;   //  点击后关闭提示弹窗
-        },
+        }
+    },
+    created() {
+      this.$bus.$on('aevent', (val) => {
+        console.log(val);
+        this.$nextTick(() => {
+            this.$refs.searchInput.focus()
+        })
+      })
+    },
+    beforeDestroy() {
+      this.$bus.$off('aevent');
     },
     mounted(){
         this.$nextTick(() => {
             this.$refs.searchInput.focus()
+            
         })
     },
     showAdd(){

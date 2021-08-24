@@ -7,6 +7,9 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
+const bus = new Vue()
+Vue.prototype.$bus = bus;
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
