@@ -27,6 +27,7 @@
 export default {
     data() {
         return{
+            ifjump:false,
             namelist:[ 
             {
                 id: 1,
@@ -96,12 +97,14 @@ export default {
                     {nameNav: '文本对比', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/text_compare.png')},
                     {nameNav: 'NLPIndex', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/nlp.png')}, //替换
                     {nameNav: 'Sci-hub', jumpPath: 'https://gfsoso.99lb.net/sci-hub.html', picPath: require('@/assets/ima/scihub.png')},
+
                     {nameNav: 'PaperwithCode', jumpPath: 'https://paperswithcode.com/', picPath: require('@/assets/ima/paper.png')}, //替换
                     {nameNav: 'Connected Paper', jumpPath: 'https://www.connectedpapers.com/', picPath: require('@/assets/ima/connect.png')}, //替换
                     {nameNav: '百度学术', jumpPath: 'https://xueshu.baidu.com/', picPath: require('@/assets/ima/baidu.png')},
                     {nameNav: 'softonic', jumpPath: 'https://en.softonic.com/', picPath: require('@/assets/ima/qqMail.png')},//替换
                     {nameNav: '荔枝数码', jumpPath: 'https://www.lizhi.io/', picPath: require('@/assets/ima/lizhi.png')},//替换
                     {nameNav: '中科大镜像', jumpPath: 'http://mirrors.ustc.edu.cn/', picPath: require('@/assets/ima/ustc.png')},//替换
+
                     {nameNav: 'Linux命令', jumpPath: 'https://man.linuxde.net/', picPath: require('@/assets/ima/linux.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
@@ -134,7 +137,7 @@ export default {
                     {nameNav: '腾讯招聘', jumpPath: 'https://careers.tencent.com/home.html', picPath: require('@/assets/ima/tengxun.png')},
                     {nameNav: '阿里巴巴', jumpPath: 'https://talent.alibaba.com/', picPath: require('@/assets/ima/ali.png')},
                     {nameNav: '字节跳动', jumpPath: 'https://jobs.bytedance.com/', picPath: require('@/assets/ima/byte.png')},
-                    {nameNav: '百度招聘', jumpPath: 'https://talent.baidu.com/external/baidu/index.html', picPath: require('@/assets/ima/baidu.png')},
+                    {nameNav: '百度招聘', jumpPath: 'https://talent.baidu.com/external/baidu/index.html', picPath: require('@/assets/ima/baidu_search.png')},
                     {nameNav: 'Google', jumpPath: 'http://careers.google.cn/', picPath: require('@/assets/ima/google.png')},
                     {nameNav: 'Microsoft', jumpPath: 'https://careers.microsoft.com/us/en', picPath: require('@/assets/ima/mic.png')},
                     {nameNav: '网易招聘', jumpPath: 'https://campus.163.com/app/net/position', picPath: require('@/assets/ima/wangyi.png')},
@@ -205,7 +208,11 @@ export default {
     },
     methods:{
         clickNavChild: function(item){
+            // this.$emit('childevent',!this.isjump);
+            this.$bus.$emit('aevent', !this.isjump);
             window.open(item.jumpPath);
+            //this.isjump=!this.isjump
+            //console.log(this.isjump)
         },
         test: function(index){
             console.log("index : " + index);
