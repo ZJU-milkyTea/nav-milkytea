@@ -153,7 +153,7 @@ export default {
   width: 26px;
   height: 30px;
   vertical-align: middle; 
-  background-image: url('../assets/ima/boat_mini.png');
+  background-image: url('../assets/ima/boat.png');
   background-repeat:no-repeat;
   background-size:26px 30px;
   display: inline-block;
