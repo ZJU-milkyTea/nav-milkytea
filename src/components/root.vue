@@ -10,7 +10,7 @@
 <script type="text/javascript">
 import header from './header.vue';
 import searchRoot from './search.vue'
-import navRoot from './navRoot.vue';
+import navRoot from './navChild.vue';
 
 // import xxx from someSrc     es6中得到模块的方法。
 
