@@ -193,7 +193,7 @@ export default {
                 title: '其他',
                 numberLink:5,
                 NavItem: [
-                    {nameNav: 'fafucs攻略', jumpPath: 'https://dasai.lanqiao.cn/', picPath: require('@/assets/ima/fafu_logo.png')},
+                    {nameNav: 'fafucs攻略', jumpPath: 'https://guide.efafucs.com/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: 'cs-note', jumpPath: 'https://cyc2018.github.io/CS-Notes/#/', picPath: require('@/assets/ima/fafu_logo.png')},
                     {nameNav: '天空之城', jumpPath: 'https://www.skypixel.com/?site=brandsite&from=nav', picPath: require('@/assets/ima/youtube.png')},
                     {nameNav: '视觉中国', jumpPath: 'https://www.vcg.com/', picPath: ''},
