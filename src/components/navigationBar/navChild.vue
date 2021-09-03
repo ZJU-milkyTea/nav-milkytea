@@ -193,9 +193,9 @@ export default {
                 title: '其他',
                 numberLink:5,
                 NavItem: [
-                    {nameNav: 'fafucs攻略', jumpPath: 'https://guide.efafucs.com/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: 'cs-note', jumpPath: 'https://cyc2018.github.io/CS-Notes/#/', picPath: require('@/assets/ima/fafu_logo.png')},
-                    {nameNav: '天空之城', jumpPath: 'https://www.skypixel.com/?site=brandsite&from=nav', picPath: require('@/assets/ima/youtube.png')},
+                    {nameNav: 'fafucs攻略', jumpPath: 'https://dasai.lanqiao.cn/', picPath: require('@/assets/ima/logo1.png')},
+                    {nameNav: 'cs-note', jumpPath: 'https://cyc2018.github.io/CS-Notes/#/', picPath: require('@/assets/ima/github.png')},
+                    {nameNav: '天空之城', jumpPath: 'https://www.skypixel.com/?site=brandsite&from=nav', picPath: require('@/assets/ima/天空之城.png')},
                     {nameNav: '视觉中国', jumpPath: 'https://www.vcg.com/', picPath: ''},
                     {nameNav: 'VR校园全景', jumpPath: 'https://720yun.com/t/qqena9jxz9cjpxj8u9?pano_id=RMWYrRWyZvtGibuD', picPath: ''},
                     {nameNav: 'ifafu', jumpPath: 'https://ifafu.cn/', picPath: ''},
