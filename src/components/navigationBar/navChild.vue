@@ -95,7 +95,7 @@ export default {
                 NavItem: [
                     {nameNav: '知网', jumpPath: 'https://www.cnki.net/', picPath: require('@/assets/ima/zhiwang.png')},
                     {nameNav: 'arxiv', jumpPath: 'https://arxiv.org/', picPath: require('@/assets/ima/arxiv.png')},
-                    {nameNav: '文本对比', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/text_compare.png')},
+                    {nameNav: 'NLP Index', jumpPath: 'https://index.quantumstat.com/', picPath: require('@/assets/ima/nlp.png')},
                     {nameNav: '高教书苑', jumpPath: 'https://ebook.hep.com.cn/ebooks/index.html#/', picPath: require('@/assets/ima/shu.png')},
                     {nameNav: 'Sci-hub', jumpPath: 'https://gfsoso.99lb.net/sci-hub.html', picPath: require('@/assets/ima/scihub.png')},
                     {nameNav: '学习强国', jumpPath: 'https://www.xuexi.cn/', picPath: require('@/assets/ima/xuexi.png')},
@@ -193,7 +193,7 @@ export default {
                 title: '其他',
                 numberLink:5,
                 NavItem: [
-                    {nameNav: 'fafucs攻略', jumpPath: 'https://dasai.lanqiao.cn/', picPath: require('@/assets/ima/logo1.png')},
+                    {nameNav: 'fafucs攻略', jumpPath: 'https://guide.efafucs.com/', picPath: require('@/assets/ima/logo1.png')},
                     {nameNav: 'cs-note', jumpPath: 'https://cyc2018.github.io/CS-Notes/#/', picPath: require('@/assets/ima/github.png')},
                     {nameNav: '天空之城', jumpPath: 'https://www.skypixel.com/?site=brandsite&from=nav', picPath: require('@/assets/ima/天空之城.png')},
                     {nameNav: '视觉中国', jumpPath: 'https://www.vcg.com/', picPath: ''},
