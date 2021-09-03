@@ -1,7 +1,7 @@
 <template>
     <div class="search-root">
         <!-- 添加搜索引擎对应图标 -->
-		<el-input id = "search-input" placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()" ref="searchInput">	
+		<el-input id = "search-input" placeholder="请输入内容" v-model="input" class="input-with-select" @keydown.enter.native="clickSearch()" ref="searchInput" clearable>	
             <el-popover placement="bottom-start" slot="prepend" v-model="visible" trigger="hover">
                 <p> 搜索引擎: </p>
                 <el-row :gutter="10">
