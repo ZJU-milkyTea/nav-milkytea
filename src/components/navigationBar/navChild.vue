@@ -104,7 +104,7 @@ export default {
                     {nameNav: '维普网', jumpPath: 'http://www.cqvip.com/', picPath: require('@/assets/ima/cqvip.png')},
                     {nameNav: '电子书', jumpPath: 'http://shuxiangjia.cn/', picPath: require('@/assets/ima/ebook.png')},
                     {nameNav: '中公网校', jumpPath: 'http://www.eoffcn.com/', picPath: require('@/assets/ima/gong.png')},
-                    {nameNav: '学习通', jumpPath: 'http://passport2.chaoxing.com/login?fid=&newversion=true&refer=http://i.chaoxing.com', picPath: ''},
+                    {nameNav: '学习通', jumpPath: 'http://passport2.chaoxing.com/login?fid=&newversion=true&refer=http://i.chaoxing.com', picPath: require('@/assets/ima/R-C.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
                     // {nameNav: '', jumpPath: '', picPath: require('@/assets/ima/.png')},
