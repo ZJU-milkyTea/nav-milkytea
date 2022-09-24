@@ -77,7 +77,7 @@ export default {
                     {nameNav: '牛客竞赛', jumpPath: 'https://ac.nowcoder.com/acm/contest/vip-index', picPath: require('@/assets/ima/newcoder.png')},
                     {nameNav: 'AcWing', jumpPath: 'https://www.acwing.com/problem/', picPath: require('@/assets/ima/AcWing.png')},
                     {nameNav: '洛谷', jumpPath: 'https://www.luogu.com.cn/problem/list', picPath: require('@/assets/ima/luogu.png')},
-                    {nameNav: 'LeetCode', jumpPath: 'https://leetcode-cn.com/', picPath: require('@/assets/ima/leetcode.png')},
+                    {nameNav: 'LeetCode', jumpPath: 'https://leetcode.cn/', picPath: require('@/assets/ima/leetcode.png')},
                     {nameNav: '蓝桥杯', jumpPath: 'http://lx.lanqiao.cn/', picPath: require('@/assets/ima/lanqiao.png')},
                     {nameNav: 'Codeforce', jumpPath: 'https://codeforces.com/', picPath: require('@/assets/ima/codeforce.png')},
                     {nameNav: 'FAFUOJ', jumpPath: 'https://oj.fafu.edu.cn/#/', picPath: require('@/assets/ima/fafuoj.png')}, 
